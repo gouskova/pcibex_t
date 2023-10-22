@@ -46,23 +46,20 @@ Template("items.txt", experiment_function)
 
 // instructions 
 newText('intro', 
-	defaultText
-		.left()
-		.print()
+	defaultText.left().print()
 	,
-	newText("Hello! <br><br> You will see some words; choose whichever one you like better by clicking its button.<br> Click on the start button to begin the experiment.",
+	newText("Hello! <br><br> You will see some words; choose whichever one you like better by clicking its button.<br> Click on the start button to begin the experiment.")
+	,
 	newButton("ContinueButton", "Continue")
 		.center()
 		.print()
-		log()
+		.log()
 		.wait()
 )
 
 // exit questionnnaire
 newTrial("demographics",
-	defaultText
-	.left()
-    .print()
+	defaultText.left().print()
    ,
 	newTextInput("Optional: favorite color?", "")
 	,
@@ -70,6 +67,7 @@ newTrial("demographics",
 		.right()
 		.print()
 		.wait()
+	,
 	getTextInput("Optional: favorite color?").log() 
 	)
 
@@ -83,7 +81,7 @@ newTrial("done",
 	newText("Thank you so much!")
 	,
 	newText("Here's your randomly generated id number")
-	,
+	)
 
 //
 SendResults("send")
