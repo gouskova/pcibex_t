@@ -136,7 +136,6 @@ newTrial("demo1",
 		.print()
 	,
 	newScale("Likert", "Awful", "Bad", "Mmkay", "Fabulous")
-		.size("10", "100")
 		.radio()
 		.center()
 		.labelsPosition("top")
@@ -194,7 +193,6 @@ newTrial("demo2",
 		.print()
 	,
 	newScale("Likert", "Awful", "Bad", "Mmkay", "Fabulous")
-		.size("10", "100")
 		.radio()
 		.center()
 		.labelsPosition("top")
@@ -258,6 +256,13 @@ function_for_template = row =>
 			.center()
 			.print()
 		,
+	newScale("Likert", "Awful", "Bad", "Mmkay", "Fabulous")
+		.radio()
+		.center()
+		.labelsPosition("top")
+		.print()
+		.log()
+	,
 		newScale("MainSliderV",   100)
 			.size("30vh", "30vh")
 			.center()
@@ -275,6 +280,7 @@ function_for_template = row =>
 			.center()
 			.print()
 			.wait(getScale("MainSliderV").test.selected())
+			.wait(getScale("Likert").test.selected())
 	)
 	.log("group", row.group)
 	.log("itemsetNum", row.itemsetNum)
