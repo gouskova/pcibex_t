@@ -135,13 +135,6 @@ newTrial("demo1",
 				})
 		.print()
 	,
-	newScale("Likert", "Awful", "Bad", "Mmkay", "Fabulous")
-		.radio()
-		.center()
-		.labelsPosition("top")
-		.print()
-		.log()
-	,
 	newScale("MainSliderV",   100)
 		.size("30vh", "30vh")
 		.center()
@@ -191,13 +184,6 @@ newTrial("demo2",
 				"padding": "5px",
 				})
 		.print()
-	,
-	newScale("Likert", "Awful", "Bad", "Mmkay", "Fabulous")
-		.radio()
-		.center()
-		.labelsPosition("top")
-		.print()
-		.log()
 	,
 	newScale("MainSliderV",   100)
 		.size("30vh", "30vh")
@@ -256,13 +242,18 @@ function_for_template = row =>
 			.center()
 			.print()
 		,
-	newScale("Likert", "Awful", "Bad", "Mmkay", "Fabulous")
-		.radio()
-		.center()
-		.labelsPosition("top")
-		.print()
-		.log()
+		newScale("Likert", "Awful", "Bad", "Mmkay", "Fabulous")
+			.radio()
+			.center()
+			.labelsPosition("top")
+			.print()
+			.log()
 	,
+		newButton("Forcies", row.sentence)
+			.center()
+			.print()
+			.log()
+	,	
 		newScale("MainSliderV",   100)
 			.size("30vh", "30vh")
 			.center()
