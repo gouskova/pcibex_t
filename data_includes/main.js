@@ -17,6 +17,7 @@ experiment_function = row=>
 		.italic()
 		.center()
 		.print()
+	,
 	newButton("word", row.item)
 		.center()
 		.print()
