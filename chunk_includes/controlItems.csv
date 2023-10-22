@@ -1,0 +1,10 @@
+group,itemsetNum,conditionA,conditionB,sentence
+,5,control,control,"This sentence doesn't feature any variables."
+,6,control,control,"Does sentence feature any variables?"
+,7,control,control,"Which variables does this sentence feature?"
+,8,control,control,"I bet this sentence doesn't feature any variables."
+,9,control,control,"Create a sentence without any variables!"
+,10,control,control,"No variables should feature in this sentence."
+,11,control,control,"None of the manipulated variables feature in this sentence."
+,12,control,control,"All of the variables are absent from this sentence."
+,13,control,control,"Do any variables feature in this sentence?"
