@@ -40,7 +40,7 @@ var popupHTML = "<div style='display: none; position: fixed; padding: 0vmin; wid
 PennController.ResetPrefix(null)
 
 // Turn off debugger
-DebugOff()
+//DebugOff()
 
 // for getting Prolific id from the URL and log it to the results file
 Header().log("PROLIFIC_PID", GetURLParameter("PROLIFIC_PID"));
@@ -135,6 +135,12 @@ newTrial("demo1",
 				})
 		.print()
 	,
+	newScale("Likert", "Awful", "Bad", "Mmkay", "Fabulous")
+		.radio()
+		.labelsPosition("top")
+		.print()
+		.log()
+	,
 	newScale("MainSliderV",   100)
 		.size("30vh", "30vh")
 		.center()
@@ -207,6 +213,7 @@ newTrial("demo2",
 		.center()
 		.print()
 		.wait(getScale("MainSliderV").test.selected())
+		.wait(getScale("Likert").test.selected())
 )
 
 
