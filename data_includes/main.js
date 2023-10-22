@@ -207,7 +207,6 @@ newTrial("demo2",
 		.center()
 		.print()
 		.wait(getScale("MainSliderV").test.selected())
-		.wait(getScale("Likert").test.selected())
 )
 
 
